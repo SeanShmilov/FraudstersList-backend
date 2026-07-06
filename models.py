@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class Player(BaseModel):
+class Fraudster(BaseModel):
     name: str
     team: str
     position: str

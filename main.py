@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import players
+from routes import fraudsters
 
-app = FastAPI(title="FifaApp API")
+app = FastAPI(title="FraudstersList API")
 
 app.add_middleware(
     CORSMiddleware,
@@ -11,7 +11,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(players.router, prefix="/api")
+app.include_router(fraudsters.router, prefix="/api")
 
 
 @app.get("/health")

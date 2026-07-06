@@ -6,5 +6,5 @@ load_dotenv()
 
 MONGO_URI = environ.get("MONGO_URI", "mongodb://localhost:27017")
 client = AsyncIOMotorClient(MONGO_URI)
-db = client["fifaapp"]
-players_collection = db["players"]
+db = client["fraudsterslist"]
+fraudsters_collection = db["fraudsters"]
